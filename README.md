@@ -12,8 +12,11 @@ The analytics warehouse is self-hosted on **PostgreSQL** utilizing two primary r
 
 ## 📈 Core Business Insights & Analytical Framework
 
-### 1. Portfolio Health Overview
-**Business Intent:** Assessing systemic exposure concentrations across consumer loan silos.
-SELECT loan_type, COUNT(loan_id), SUM(outstanding_loan_amount)... **-- See full code in queries.sql**
+In a real bank, a Risk or Collections Manager doesn't just want to see a raw list of names; they need to optimize operations and minimize loss. These 8 business questions cover descriptive, diagnostic, and operational analytics using advanced SQL concepts:
+
+### 1. Portfolio Health (Descriptive Analysis): What is the total outstanding loan amount and the average number of days past due (DPD) across different asset classes (Home, Auto, Personal)?
+SQL Focus: Basic Aggregations (SUM, AVG), GROUP BY.
+
+
 Output Verification:
-q1.png
+![Portfolio Health](screenshots/q1.png)
