@@ -16,3 +16,4 @@ The analytics warehouse is self-hosted on **PostgreSQL** utilizing two primary r
 **Business Intent:** Assessing systemic exposure concentrations across consumer loan silos.
 SELECT loan_type, COUNT(loan_id), SUM(outstanding_loan_amount)... **-- See full code in queries.sql**
 Output Verification:
+q1.png
