@@ -15,8 +15,14 @@ The analytics warehouse is self-hosted on **PostgreSQL** utilizing two primary r
 In a real bank, a Risk or Collections Manager doesn't just want to see a raw list of names; they need to optimize operations and minimize loss. These 8 business questions cover descriptive, diagnostic, and operational analytics using advanced SQL concepts:
 
 ### 1. Portfolio Health (Descriptive Analysis): What is the total outstanding loan amount and the average number of days past due (DPD) across different asset classes (Home, Auto, Personal)?
-SQL Focus: Basic Aggregations (SUM, AVG), GROUP BY.
+*SQL Focus: Basic Aggregations (SUM, AVG), GROUP BY*
 
-
-Output Verification:
+*Output Verification:*
 ![Portfolio Health](screenshots/q1.png)
+
+### 2. Regulatory Risk Segmentation (Regulatory Reporting): Can we classify our delinquent loans into standard Indian banking risk buckets (SMA-0: 1-30 DPD, SMA-1: 31-60 DPD, SMA-2: 61-90 DPD, NPA: 90+ DPD) and calculate the count and total outstanding amount for each bucket?
+*SQL Focus: Conditional logic (CASE WHEN)*
+
+*Output Verification:*
+![Regulatory Reporting](screenshots/q2.png)
+
