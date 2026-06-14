@@ -47,14 +47,33 @@ In a real bank, a Risk or Collections Manager doesn't just want to see a raw lis
 *Output Verification:*
 ![High-Value Risk Prioritization](screenshots/q5.png)
 
+### 6.	Agent Workload and Touchpoint Frequency (Resource Allocation): Calculate a running total of contact attempts made by agents over time for each loan to identify if we are over-contacting certain customers while ignoring others.
+*SQL Focus: Window Functions (SUM() OVER (PARTITION BY... ORDER BY...)).*
 
+*Output Verification:*
+![Agent Workload and Touchpoint Frequency](screenshots/q6.png)
+
+### 7.	Contact Quality Leaderboard (Advanced Ranking): Rank our top 3 recovery agents within each loan type based on the total amount they recovered.
+*SQL Focus: Window Ranking Functions (DENSE_RANK() OVER (PARTITION BY... ORDER BY...)).*
+
+*Output Verification:*
+![Contact Quality Leaderboard](screenshots/q7.png)
+
+### 8.	The "Hopeless" Account Flag (Strategic Intelligence): Identify loans where the customer has missed more than 3 payments AND the collection agent has called them more than 5 times, but the Amount_Recovered is still 0. These need to be flagged for immediate legal action.
+*SQL Focus: Common Table Expressions (CTEs), Subqueries, Multi-table filters.*
+
+*Output Verification:*
+![The "Hopeless" Account Flag](screenshots/q8.png)
 
 
 ### 🚀 How To Run Locally
 
 Initialize local instance of PostgreSQL and open pgAdmin 4.
+
 Run the DDL parameters located in the initialization headers to structure the database schema.
+
 Import source CSV files setting HEADER parsing parameters to true.
+
 Open the Query Tool, drop in scripts from queries.sql, and execute.
 
 
