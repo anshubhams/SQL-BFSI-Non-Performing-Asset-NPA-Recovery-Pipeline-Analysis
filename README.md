@@ -26,3 +26,35 @@ In a real bank, a Risk or Collections Manager doesn't just want to see a raw lis
 *Output Verification:*
 ![Regulatory Reporting](screenshots/q2.png)
 
+### 3.	Agent Productivity Benchmark (Operational Efficiency): Which recovery agents have collected the highest total amount, and what is their success rate (Total Recovered divided by the Total Outstanding of the loans they touched)?
+*SQL Focus: Multi-table JOIN, Aggregations.*
+
+*Output Verification:*
+![Agent Productivity Benchmark](screenshots/q3.png)
+
+### 4.	Call Efficiency Analytics (Behavioral Analytics): What percentage of calls result in an actual collection vs. a "Promise to Pay" or a non-response ("Busy"/"Switch Off")?
+*SQL Focus: Filtered aggregations (COUNT(CASE WHEN...)).*
+
+*Output Verification:*
+![Call Efficiency Analytics](screenshots/q4.png)
+
+*Using CTE:*
+![Call Efficiency Analytics](screenshots/q4.1.png)
+
+### 5.	High-Value Risk Prioritization (Operational Strategy): For accounts currently marked as 'NPA' (>90 DPD) that have a collateral value, what is our "Collateral Coverage Ratio" (Collateral Value / Outstanding Amount)? Find the top 10 accounts where the bank has the highest safety net.
+*SQL Focus: Mathematical expressions, WHERE filtering, LIMIT/TOP.*
+
+*Output Verification:*
+![High-Value Risk Prioritization](screenshots/q5.png)
+
+
+
+
+### 🚀 How To Run Locally
+
+Initialize local instance of PostgreSQL and open pgAdmin 4.
+Run the DDL parameters located in the initialization headers to structure the database schema.
+Import source CSV files setting HEADER parsing parameters to true.
+Open the Query Tool, drop in scripts from queries.sql, and execute.
+
+
