@@ -48,7 +48,7 @@ In a real bank, a Risk or Collections Manager doesn't just want to see a raw lis
 ![High-Value Risk Prioritization](screenshots/q5.png)
 
 ### 6.	Agent Workload and Touchpoint Frequency (Resource Allocation): Calculate a running total of contact attempts made by agents over time for each loan to identify if we are over-contacting certain customers while ignoring others.
-*SQL Focus: Window Functions (SUM() OVER (PARTITION BY... ORDER BY...)).*
+*SQL Focus: Window Functions (COUNT() OVER (PARTITION BY... ORDER BY...)).*
 
 *Output Verification:*
 ![Agent Workload and Touchpoint Frequency](screenshots/q6.png)
